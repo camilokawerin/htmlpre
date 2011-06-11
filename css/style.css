@@ -1,0 +1,57 @@
+html, body {
+	height: 96%;
+	}
+body {
+	font-family: monospace;
+	}
+article {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+h1, span {
+	color: #0000ff;
+	}
+section {
+	background: #fff;
+	}
+h2 {
+	color: #000080;
+	}
+pre {
+	max-height: 25%;
+	}
+.unlicense {
+	height: 7.38em;
+	padding: 1em 0;
+	width: 70%;
+	background: #eee;
+	overflow: auto;
+	}
+fieldset {
+	width: 50%;
+	}
+#code {
+	display: block;
+	width: 99%;
+	margin-bottom: 1em;
+	color: #666;
+	}
+button {
+	float: right;
+	}
+pre textarea {
+	border: none;
+	width: 100%;
+	}
+.script, .style {
+	color: #800080;
+	}
+b {
+	color: #008080;
+	}
+i {
+	color: #000080;
+	font-style: normal;
+	}
