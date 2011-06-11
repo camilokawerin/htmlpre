@@ -1,3 +1,13 @@
+	
+	Convert your HTML to entities, copy the returned code and paste it 
+	between <pre></pre>. Add the style to your CSS for highlight the syntax.
+	
+	Created by Camilo Kawerín <http://kawerin.com.ar> from Con Vista Al Mar <http://convistaalmar.com.ar/>.
+	
+	TO-DO
+	* Offer to switch to a white on black style
+	* Support syntax highlight for CSS and Javascript
+	
 	This is free and unencumbered software released into the public domain.
 
 	Anyone is free to copy, modify, publish, use, compile, sell, or

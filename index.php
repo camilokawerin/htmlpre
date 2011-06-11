@@ -112,6 +112,14 @@ i {
 <footer>
 	<h2>Credits</h2>
 	<p>Created by <a href="http://kawerin.com.ar">Camilo Kawerín</a> from <a href="http://convistaalmar.com.ar/">Con Vista Al Mar</a> in June 2011.</p>
+
+	<h3>TO-DO</h3>
+	<ul>
+		<li>Offer to switch to a <em>white on black</em> style.</li>
+		<li>Support syntax highlight for CSS and Javascript</li>
+	</ul>
+
+	<h3>Unlicense</h3>
 	<pre class="unlicense">
 	This is free and unencumbered software released into the public domain.
 
@@ -138,11 +146,6 @@ i {
 
 	For more information, please refer to &lt;http://unlicense.org/&gt;
 	</pre>
-	<h3>TO-DO</h3>
-	<ul>
-		<li>Offer to switch to a <em>white on black</em> style.</li>
-		<li>Support syntax highlight for CSS and Javascript</li>
-	</ul>
 </footer>
 
 </article>
