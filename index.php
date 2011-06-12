@@ -13,18 +13,11 @@ if (preg_match_all('/<(.+?)>/s', $code, $match)) {
 		if (isset($tags[$i])) {
 			$tag = htmlspecialchars($tags[$i], ENT_NOQUOTES);
 			$class = '';
-			if (preg_match('/(style|script)/si', $elem[$i], $match)) {
-				$class = ' class="' . $match[0] . '"';
+			if (preg_match('/^[\/]{0,1}(style|script)/si', $elem[$i], $match)) {
+				$class = ' class="' . str_replace('/', '', $match[0]) . '"';
 			} else {
 				$tag = preg_replace('/(?<= )([a-z]+)(?==)/si', '<i>$1</i>', $tag);
-				if (preg_match_all('/"(.*?)"/s', $tag, $match)) {
-					$values = $match[0];
-					$_tag = '';
-					foreach (preg_split('/"(.*?)"/s', $tag) as $y => $attr) {
-						$_tag .= $attr . (isset($values[$y]) ? '<b>' . $values[$y] . '</b>' : '');
-					}
-					$tag = $_tag;
-				}
+				$tag = preg_replace('/("(.*?)")/s', '<b>$1</b>', $tag);
 			}
 			$tag = '<span' . $class . '>' . $tag . '</span>';
 		}
@@ -111,11 +104,14 @@ i {
 
 <footer>
 	<h2>Credits</h2>
-	<p>Created by <a href="http://kawerin.com.ar">Camilo Kawerín</a> from <a href="http://convistaalmar.com.ar/">Con Vista Al Mar</a> in June 2011.</p>
+	<p>Created by <a href="http://kawerin.com.ar">Camilo Kawerín</a> from <a href="http://convistaalmar.com.ar/">Con Vista Al Mar</a> in a saturday&rsquo;s afternoon of June 2011.</p>
+	
+	<p><b>Current version is 0.1.</b></p>
 
 	<h3>TO-DO</h3>
 	<ul>
-		<li>Offer to switch to a <em>white on black</em> style.</li>
+		<li><s>Offer to switch to a <i>white on black</i> style</s> Allow to submit your preferred colors!</li>
+		<li>Show <i>presets</i> and user submitted palettes for quick choice.</li>
 		<li>Support syntax highlight for CSS and Javascript</li>
 	</ul>
 
@@ -150,7 +146,8 @@ i {
 
 </article>
 
-</body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script src="js/script.js"></script>
+
+</body>
 </html>
